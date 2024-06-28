@@ -1,0 +1,260 @@
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #ffc0cb; /* Rosa pastel */
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    position: fixed;
+    top: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 100px auto; /* Ajusta el margen superior e inferior */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.about-me {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.slider {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-container {
+    display: flex;
+    animation: slide 10s infinite;
+}
+
+.slide {
+    min-width: 100%;
+    transition: 0.5s;
+    width: 400px;
+    height: 470px;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Estilos del boton */
+.btn-subscribe {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: #ffc0cb; /* Rosa pastel */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-subscribe:hover {
+    background-color: #ff99b3;
+}
+
+.form-container {
+    width: 50;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    
+    margin: 100px auto; /* Ajusta el margen superior e inferior */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #ffc0cb; /* Rosa pastel */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff99b3;
+}
+
+/* Estilos para la galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 60px; /* Espacio para el header */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Ajusta el tamaño y recorta las imágenes para que mantengan la relación de aspecto */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Estilos para redes sociales */
+.social-container {
+    align-items: center;
+    max-width: 1200px;
+    margin: 100px auto; /* Ajusta el margen superior e inferior */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    align-items: center; /* Centra los enlaces verticalmente */
+}
+
+.social-links a {
+    margin: 0 10px; /* Espacio entre cada enlace */
+    color: #333; /* Color de los enlaces */
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 18px; /* Tamaño del texto */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Estilos para img */
+img{
+    width: 400px;
+    height: 470px;
+}
+
+/* Estilos para p */
+p{
+    margin-bottom: 20px; 
+    text-align: left;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+/* Estilos para el footer */
+.footer{
+    text-align: center;
+    padding: 1em 0;
+    background-color:#ffc0cb;
+    color: #333;
+}

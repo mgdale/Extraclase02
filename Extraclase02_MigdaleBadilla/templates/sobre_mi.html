@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">I N I C I O</a></li>
+                <li><a href="{{ url_for('creaciones') }}">P O R T F O L I O</a></li>
+                <li><a href="{{ url_for('sobre_mi') }}">M E</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="about-me">
+            <h1>S H I N O N</h1>
+            <p>Hola, soy Chinom, un chico trans artista. 
+                Tengo 22 años. Soy de Mexico, pero actualmente vivo en Estados Unidos. Mido 1.70cm. Amo el chocolate.
+                No tengo vesicula. Soy alergico al cacahuate y al perfume. Trabaje en el Mc'Donalds, pero despues de 
+                mucho debate decidi vivir de mi arte ¡¡COMISIONAME!!
+            </p>    
+        </div>
+        
+        <!-- Imagen a la derecha -->
+        <div class="image-container">
+            <img class= "img" src="/static/img/img.jpg" alt="Imagen Sobre Mí">
+        </div>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="social-container">
+        <div class="social-links">
+            <a href="https://www.twitch.tv/shinon_sy?sr=a" target="_blank">T W I T C H</a>
+            <a href="https://www.instagram.com/shinon_sy?igsh=MXN1ZjczZHFveTU4dg==" target="_blank">Instagram</a>
+            <a href="https://youtube.com/@shinon_sy?si=pMcUmuWYdl1Hblw8" target="_blank">Y O U T U B E</a>
+            <a href="https://www.tiktok.com/@shinon_sy?lang=es" target="_blank">TikTok</a>
+        
+        </div>
+    </div>
+
+    <!-- Pie de pàgina -->
+    <footer>
+        <p class="footer"> &copy; 2024 S H I N O N. Todos los derechos reservados</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

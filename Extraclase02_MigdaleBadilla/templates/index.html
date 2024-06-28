@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aplicación Web</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">I N I C I O</a></li>
+                <li><a href="{{ url_for('creaciones') }}">P O R T F O L I O</a></li>
+                <li><a href="{{ url_for('sobre_mi') }}">M E</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <div class="about-me">
+            <h1>S H I N O N</h1>
+            <p>Hola, soy Chinom, un chico trans artista. 
+                Realizo diversas ilustraciones comisionadas o solo obteniendo 
+                inspiracion de mi entorno
+                ¡Puedes suscribirte para obtener contenido digital de mi arte!</p>
+            <a href="{{ url_for('suscribirse') }}" class="btn-subscribe">Suscribirse</a>
+        
+        </div>
+        <div class="slider">
+            <div class="slider-container">
+                <div class="slide"><img src="/static/img/img1.jpg" alt="Ilustración 1"></div>
+                <div class="slide"><img src="/static/img/img2.jpg" alt="Ilustración 2"></div>
+                <div class="slide"><img src="/static/img/img3.jpg" alt="Ilustración 3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de pàgina -->
+    <footer>
+        <p class="footer"> &copy; 2024 S H I N O N. Todos los derechos reservados</p>
+    </footer>
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
